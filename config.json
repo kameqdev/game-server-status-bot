@@ -1,0 +1,17 @@
+{
+    "type": "",
+    "host": "",
+    "port": 0,
+    "maxRetries": 1,
+    "refreshTime": 30,
+    "nameIfServerOnline": "",
+    "nameIfServerOffline": "",
+    "nameIfPasswordRequired": "",
+    "stateIfServerOnline": "",
+    "stateIfServerOffline": "",
+    "stateIfPasswordRequired": "",
+    "typeIfServerOnline": 0,
+    "typeIfServerOffline": 0,
+    "typeIfPasswordRequired": 0,
+    "logging": true
+}

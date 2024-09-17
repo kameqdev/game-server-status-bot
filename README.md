@@ -2,10 +2,15 @@
 Discord bot for displaying game server information in bot status.
 
 ## How to run the bot
-After filling up the config, creating .env file with required data and ensuring that you have deno installed, you can type in the console:
-```shell
-deno run --allow-env --allow-read --allow-net index.ts
-```
+After filling up the config, creating .env file with required data and ensuring that you have deno installed, you can:
+- run it using:
+    ```shell
+    deno task start
+    ```
+- run it with [PM2](https://pm2.keymetrics.io/) using:
+    ```shell
+    deno task pm2
+    ```
 
 ## About Discord bot status
 Bot status is an object containg *name*, *state* and *type*. They're shown as in the following image:  

@@ -1,6 +1,8 @@
 {
   "tasks": {
-    "dev": "deno run --watch main.ts"
+    "dev": "deno run --watch main.ts",
+    "start": "deno run --allow-env --allow-read --allow-net --watch index.ts",
+    "pm2": "pm2 start index.ts --interpreter=\"deno\" --interpreter-args=\"task start\""
   },
   "imports": {
     "@std/assert": "jsr:@std/assert@1",

@@ -1,4 +1,4 @@
-# game-server-status-bot
+# Game server status bot
 Discord bot for displaying game server information in bot status.
 
 ## How to run the bot

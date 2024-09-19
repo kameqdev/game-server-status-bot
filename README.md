@@ -19,7 +19,8 @@ Where *Playing* is the activity type set by the *type*
 
 ## Putting dynamic data into Discord bot status
 You can insert dynamic game server data into *name* and *state* by putting *{[some_gamedig_response_key](https://github.com/gamedig/node-gamedig?tab=readme-ov-file#query-response)}* in a string, e.g. "Players: {numplayers}".  
-Be aware that using keys with an object or array type can result in unexpected behaviour.
+Be aware that using keys with an object or array type can result in unexpected behaviour.  
+Also don't use it in strings displayed when server is offline, because it will simply end up with unsubstituted values in bot status. You might be aware, that it is not possible to fetch data from offline or not existing server :> 
 
 ## Config
 | **key** | **type** | **description** |
@@ -29,15 +30,15 @@ Be aware that using keys with an object or array type can result in unexpected b
 | port | number | Connection port or query port for the game server. |
 | maxRetries | number | Number of retries to query server in case of failure. |
 | refreshTime | number | Every how many seconds the status should be refreshed. |
-| nameOnServerOnline | string | Text displayed as the name of the bot status if server is online. You can use [dynamic data](https://github.com/kameqdev/game-server-status-bot?tab=readme-ov-file#putting-dynamic-data-into-discord-bot-status) there. |
-| nameOnServerOffline | string | Text displayed as the name of the bot status if server is offline. Gets the previous value if this one is not set. You can use [dynamic data](https://github.com/kameqdev/game-server-status-bot?tab=readme-ov-file#putting-dynamic-data-into-discord-bot-status) there. |
-| nameOnPasswordRequired | string | Text displayed as the name of the bot status if server requires password. Gets the previous value if this one is not set. You can use [dynamic data](https://github.com/kameqdev/game-server-status-bot?tab=readme-ov-file#putting-dynamic-data-into-discord-bot-status) there. |
-| stateOnServerOnline | string | Text displayed as the state of the bot status if server is online. You can use [dynamic data](https://github.com/kameqdev/game-server-status-bot?tab=readme-ov-file#putting-dynamic-data-into-discord-bot-status) there. |
-| stateOnServerOffline | string | Text displayed as the state of the bot status if server is offline. Gets the previous value if this one is not set. You can use [dynamic data](https://github.com/kameqdev/game-server-status-bot?tab=readme-ov-file#putting-dynamic-data-into-discord-bot-status) there. |
-| stateOnPasswordRequired | string | Text displayed as the state of the bot status if server requires password. Gets the previous value if this one is not set. You can use [dynamic data](https://github.com/kameqdev/game-server-status-bot?tab=readme-ov-file#putting-dynamic-data-into-discord-bot-status) there. |
-| typeOnServerOnline | number | [ActivityType](https://discord-api-types.dev/api/discord-api-types-v10/enum/ActivityType) representing the type of bot status if server is online. |
-| typeOnServerOffline | number | [ActivityType](https://discord-api-types.dev/api/discord-api-types-v10/enum/ActivityType) representing the type of bot status if server is offline. Gets the previous value if this one is not set. |
-| typeOnPasswordRequired | number | [ActivityType](https://discord-api-types.dev/api/discord-api-types-v10/enum/ActivityType) representing the type of bot status if server requires password. Gets the previous value if this one is not set. |
+| nameIfServerOnline | string | Text displayed as the name of the bot status if server is online. You can use [dynamic data](https://github.com/kameqdev/game-server-status-bot?tab=readme-ov-file#putting-dynamic-data-into-discord-bot-status) there. |
+| nameIfServerOffline | string | Text displayed as the name of the bot status if server is offline. Gets the previous value if this one is not set. You can use [dynamic data](https://github.com/kameqdev/game-server-status-bot?tab=readme-ov-file#putting-dynamic-data-into-discord-bot-status) there. |
+| nameIfPasswordRequired | string | Text displayed as the name of the bot status if server requires password. Gets the previous value if this one is not set. You can use [dynamic data](https://github.com/kameqdev/game-server-status-bot?tab=readme-ov-file#putting-dynamic-data-into-discord-bot-status) there. |
+| stateIfServerOnline | string | Text displayed as the state of the bot status if server is online. You can use [dynamic data](https://github.com/kameqdev/game-server-status-bot?tab=readme-ov-file#putting-dynamic-data-into-discord-bot-status) there. |
+| stateIfServerOffline | string | Text displayed as the state of the bot status if server is offline. Gets the previous value if this one is not set. You can use [dynamic data](https://github.com/kameqdev/game-server-status-bot?tab=readme-ov-file#putting-dynamic-data-into-discord-bot-status) there. |
+| stateIfPasswordRequired | string | Text displayed as the state of the bot status if server requires password. Gets the previous value if this one is not set. You can use [dynamic data](https://github.com/kameqdev/game-server-status-bot?tab=readme-ov-file#putting-dynamic-data-into-discord-bot-status) there. |
+| typeIfServerOnline | number | [ActivityType](https://discord-api-types.dev/api/discord-api-types-v10/enum/ActivityType) representing the type of bot status if server is online. |
+| typeIfServerOffline | number | [ActivityType](https://discord-api-types.dev/api/discord-api-types-v10/enum/ActivityType) representing the type of bot status if server is offline. Gets the previous value if this one is not set. |
+| typeIfPasswordRequired | number | [ActivityType](https://discord-api-types.dev/api/discord-api-types-v10/enum/ActivityType) representing the type of bot status if server requires password. Gets the previous value if this one is not set. |
 | logging | boolean | Whether console logs should be enabled. |
 
 ## .env

@@ -39,8 +39,10 @@ const setActivity = async (client: Client): Promise<void> => {
 
 	const activityOptions = status(state)
 
-	activityOptions.name = activityOptions.name.replaceAll(/{(.*?)}/g, (_: string, key: string) => `${state[key]}`)
-	activityOptions.state = activityOptions?.state?.replaceAll(/{(.*?)}/g, (_: string, key: string) => `${state[key]}`)
+	if (state) {
+		activityOptions.name = activityOptions.name.replaceAll(/{(.*?)}/g, (_: string, key: string) => `${state[key]}`)
+		activityOptions.state = activityOptions?.state?.replaceAll(/{(.*?)}/g, (_: string, key: string) => `${state[key]}`)
+	}
 
 	client?.user?.setActivity(activityOptions)
 }

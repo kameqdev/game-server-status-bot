@@ -1,4 +1,4 @@
-import { Client, Message, Events, ActivityType, GatewayIntentBits, ActivityOptions } from 'discord.js'
+import { Client, Events, ActivityOptions } from 'discord.js'
 import { GameDig, Results } from 'gamedig'
 import { format } from 'jsr:@std/datetime/format'
 import 'jsr:@std/dotenv/load'

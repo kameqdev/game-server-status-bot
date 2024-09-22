@@ -1,7 +1,6 @@
 import { Client, Events, ActivityOptions } from 'discord.js'
 import { GameDig, Results } from 'gamedig'
 import { format } from 'jsr:@std/datetime/format'
-import 'jsr:@std/dotenv/load'
 import config from './config.json' with { type: 'json' }
 
 

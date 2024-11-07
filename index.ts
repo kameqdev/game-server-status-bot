@@ -47,7 +47,7 @@ const setActivity = async (client: Client): Promise<void> => {
 }
 
 client.once(Events.ClientReady, async (client: Client): Promise<void> => {
-	console.log(`[${getDate()}] Client ready!${Math.random() > 0.90 ? ' uwu' : ''}`);
+	console.log(`Client ready!`);
 	
 	await setActivity(client)
 	setInterval(async () => {
